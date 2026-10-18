@@ -83,7 +83,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	});
 
 	// 关于及其子菜单
-	links.push({
+/* 	links.push({
 		name: "关于",
 		url: "#",
 		icon: "material-symbols:info",
@@ -95,7 +95,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			LinkPresets.About,
 		],
 	});
-
+ */
 	// 自定义导航栏链接
 	links.push({
 		name: "链接",

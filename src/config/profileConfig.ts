@@ -9,10 +9,10 @@ export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.avif",
 
 	// 名字
-	name: "XiaYe",
+	name: "XiaoP",
 
 	// 个人签名
-	bio: "Hello, I'm XiaYe.",
+	bio: "Hello, I'm XiaoP.",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -25,25 +25,25 @@ export const profileConfig: ProfileConfig = {
 			name: "GitHub",
 			icon: "fa7-brands:github",
 			url: "https://github.com/pengg-spe",
-			showName: false,
+			showName: true,
 		},
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
 			url: "1287130488@qq.com",
-			showName: false,
+			showName: true,
 		},
 		{
 			name: "RSS",
 			icon: "fa7-solid:rss",
 			url: "/rss/",
-			showName: false,
+			showName: true,
 		},
 		{
 			name: "Atom",
 			icon: "fa7-solid:atom",
 			url: "/atom/",
-			showName: false,
+			showName: true,
 		},
 	],
 };
