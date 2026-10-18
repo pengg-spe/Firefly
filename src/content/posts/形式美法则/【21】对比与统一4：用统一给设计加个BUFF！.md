@@ -7,6 +7,7 @@ tags:
   - 对比与统一
 series: 形式美法则
 seriesOrder: 21
+category: 美学
 ---
 ### 主题：用统一给设计加个BUFF！
 
