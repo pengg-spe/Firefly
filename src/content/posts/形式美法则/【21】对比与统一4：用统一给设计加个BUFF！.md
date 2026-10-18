@@ -1,6 +1,13 @@
 ---
 title: 对比与统一4
 published: 2026-10-18
+description: 形式美法则之一
+tags:
+  - 形式美
+  - 对比与统一
+category: 形式美法则
+series: 形式美法则
+seriesOrder: 21
 ---
 ### 主题：用统一给设计加个BUFF！
 
