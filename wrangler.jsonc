@@ -1,6 +1,6 @@
 {
-	"name": "firefly",
-	"compatibility_date": "2025-01-01",
+	"name": "firefly-blog", // 改为你的项目名称（仅在 wrangler deploy 时使用，Pages Git 联动部署不依赖此值）
+	"compatibility_date": "2026-10-18", // 已更新为今日
 	"compatibility_flags": ["nodejs_compat"],
 	"assets": {
 		"directory": "./dist"
