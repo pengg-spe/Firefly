@@ -4,7 +4,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"fullscreen" 全屏壁纸，"overlay" 覆盖透明，"none" 纯色背景无壁纸
 	mode: "banner",
 	// 是否启用背景视频播放，配置后将在导航栏显示视频播放按钮
-	playerEnable: true,
+	playerEnable: false,
 	/**
 	 * 背景图片配置
 	 * 图片路径支持三种格式：
@@ -71,7 +71,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 主页横幅文字
 		homeText: {
 			// 是否启用主页横幅文字
-			enable: true,
+			enable: false,
 			// 主页横幅主标题
 			title: "Lovely firefly!",
 			// 主页横幅主标题字体大小
@@ -91,7 +91,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				// 是否启用打字机效果
 				// 打字机开启 → 循环显示所有副标题
 				// 打字机关闭 → 每次刷新随机显示一条副标题
-				enable: true,
+				enable: false,
 				// 打字速度（毫秒）
 				speed: 100,
 				// 删除速度（毫秒）
@@ -100,7 +100,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				pauseTime: 2000,
 			},
 			// 是否显示标题下方的链接图标
-			linksEnable: true,
+			linksEnable: false,
 			// 首页横幅标题下方的链接图标（可选，支持 showName 显示文字）
 			// 图标支持 Iconify 格式：fa7-brands:github、fa7-solid:envelope、mdi:rss 等
 			links: [
@@ -130,7 +130,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 壁纸轮播配置，横幅壁纸和全屏壁纸共享，仅在配置多张图片时生效
 		carousel: {
 			// 是否启用壁纸轮播；关闭时保持每次刷新随机显示一张
-			enable: false,
+			enable: true,
 			// 轮播切换间隔（毫秒）
 			interval: 5000,
 			// 过渡效果: 'fade' 渐变 | 'zoom' 缩放 | 'slide' 滑动 | 'kenburns' 旋转木马

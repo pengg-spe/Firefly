@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "XiaoP",
 
 	// 个人签名
-	bio: "Hello, I'm XiaoP.",
+	bio: "天行健，君子以自强不息；地势坤，君子以厚德载物",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -25,25 +25,25 @@ export const profileConfig: ProfileConfig = {
 			name: "GitHub",
 			icon: "fa7-brands:github",
 			url: "https://github.com/pengg-spe",
-			showName: true,
+			showName: false,
 		},
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
 			url: "1287130488@qq.com",
-			showName: true,
+			showName: false,
 		},
 		{
 			name: "RSS",
 			icon: "fa7-solid:rss",
 			url: "/rss/",
-			showName: true,
+			showName: false,
 		},
 		{
 			name: "Atom",
 			icon: "fa7-solid:atom",
 			url: "/atom/",
-			showName: true,
+			showName: false,
 		},
 	],
 };

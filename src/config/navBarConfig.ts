@@ -15,9 +15,15 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 	// 主页
 	links.push(LinkPresets.Home);
+	
+	links.push(LinkPresets.Categories);
+	
+	links.push(LinkPresets.Series);
+	
+	links.push(LinkPresets.Booknav);
 
 	// 文章及其子菜单
-	links.push({
+	/* links.push({
 		name: "文章",
 		url: "#",
 		icon: "material-symbols:article",
@@ -34,10 +40,10 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			// 系列
 			LinkPresets.Series,
 		],
-	});
+	}); */
 
 	//社交及其子菜单
-	links.push({
+/* 	links.push({
 		name: "社交",
 		url: "#",
 		icon: "material-symbols:group",
@@ -48,11 +54,11 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			// 留言
 			LinkPresets.Guestbook,
 		],
-	});
+	}); */
 
 	// 我的及其子菜单
 	links.push({
-		name: "我的",
+		name: "其他",
 		url: "#",
 		icon: "material-symbols:person",
 		children: [
@@ -66,7 +72,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			LinkPresets.Gallery,
 
 			// 书签导航
-			LinkPresets.Booknav,
+			LinkPresets.Archive,
 
 			// 哔哩哔哩追番
 			LinkPresets.Bilibili,
@@ -97,7 +103,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	});
  */
 	// 自定义导航栏链接
-	links.push({
+/* 	links.push({
 		name: "链接",
 		url: "#",
 		icon: "material-symbols:link",
@@ -123,7 +129,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			},
 		],
 	});
-
+ */
 	// 文档链接
 	// links.push({
 	// 	name: "文档",
