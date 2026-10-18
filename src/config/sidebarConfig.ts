@@ -11,7 +11,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 	// left: 仅显示左侧边栏
 	// right: 仅显示右侧边栏
 	// both: 双侧边栏，1280px以上同时显示左右，769-1279px根据tabletSidebar配置显示其中一侧
-	position: "left",
+	position: "both",
 
 	// 平板端(769-1279px)显示哪侧侧边栏，仅position为both时生效
 	// left: 平板端显示左侧边栏
@@ -22,7 +22,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 	hideSidebarOnPostPage: false,
 
 	// 本页没有侧栏列时，内容栏占「侧栏 + 内容栏」总宽的比例（0–1），不设置或 ≥1 则铺满
-	noSidebarContentWidth: 0.6,
+	noSidebarContentWidth: 0.8,
 
 	// 左侧边栏组件配置列表
 	// 组件的渲染顺序完全取决于它们在配置数组中出现的顺序，但top的组件会优先于sticky位置的组件渲染
