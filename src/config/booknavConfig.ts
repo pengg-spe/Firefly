@@ -140,7 +140,7 @@ export const booknavConfig: BooknavGroup[] = [
 				url: "https://wangshubianqu.com/",
 				desc: "编曲学习",
 				weight: 8,
-			}，
+			},
 			{
 				title: "歌曲宝",
 				url: "https://www.gequbao.com/?from=www.xiaozhongjishu.com",
