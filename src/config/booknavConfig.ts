@@ -28,7 +28,7 @@ export const booknavConfig: BooknavGroup[] = [
 		id: "dev",
 		name: "开发",
 		icon: "material-symbols:code-rounded",
-		desc: "写代码时离不开的站点",
+		desc: "开发工作离不开的站点",
 		weight: 100,
 		items: [
 			{
@@ -42,29 +42,11 @@ export const booknavConfig: BooknavGroup[] = [
 				weight: 10,
 			},
 			{
-				title: "MDN Web Docs",
-				url: "https://developer.mozilla.org",
-				desc: "最权威的 Web 技术文档",
+				title: "Blueprint",
+				url: "https://www.blueprint.io/",
+				desc: "嵌入式作品制作蓝图",
 				weight: 9,
-			},
-			{
-				title: "Astro",
-				url: "https://astro.build",
-				desc: "内容驱动型网站的 Web 框架",
-				weight: 8,
-			},
-			{
-				title: "Svelte",
-				url: "https://svelte.dev",
-				desc: "把组件编译成高效原生 JS 的框架",
-				weight: 7,
-			},
-			{
-				title: "Tailwind CSS",
-				url: "https://tailwindcss.com",
-				desc: "一个功能强大且灵活的 CSS 框架",
-				weight: 6,
-			},
+			}
 		],
 	},
 	{
@@ -80,7 +62,7 @@ export const booknavConfig: BooknavGroup[] = [
 				desc: "清晰美观的 Astro 个人博客主题模板",
 				icon: "/favicon/firefly-32.png",
 				weight: 10,
-			},
+			}
 		],
 	},
 	{
@@ -94,41 +76,77 @@ export const booknavConfig: BooknavGroup[] = [
 				title: "Iconify",
 				url: "https://icon-sets.iconify.design",
 				desc: "海量开源图标集合搜索",
-				weight: 10,
+				weight: 6,
 			},
 			{
 				title: "iconfont",
 				url: "https://www.iconfont.cn",
 				desc: "阿里巴巴矢量图标库",
-				weight: 9,
+				weight: 6,
 			},
+			{
+				title: "Core77",
+				url: "https://www.core77.com/",
+				desc: "工业设计杂志",
+				weight: 7,
+			},
+			{
+				title: "普象网",
+				url: "https://www.puxiang.com/",
+				desc: "工业产品创意设计_原创分享交流",
+				weight: 8,
+			},
+			{
+				title: "Yanko Design",
+				url: "https://www.yankodesign.com/",
+				desc: "现代工业设计新闻",
+				weight: 7,
+			},
+			{
+				title: "爱给网",
+				url: "https://www.aigei.com/",
+				desc: "音效配乐_3D模型_视频素材",
+				weight: 5,
+			},
+			{
+				title: "花瓣网",
+				url: "https://huaban.com/discovery",
+				desc: "最新图片采集_最新素材采集",
+				weight: 4,
+			}
 		],
 	},
 	{
 		id: "tools",
-		name: "工具",
+		name: "音乐工具",
 		icon: "material-symbols:build-outline-rounded",
-		desc: "顺手的在线小工具",
+		desc: "在线音乐工具",
 		weight: 80,
 		items: [
 			{
-				title: "TinyPNG",
-				url: "https://tinypng.com",
-				desc: "在线压缩 PNG / JPEG 图片",
-				weight: 10,
-			},
-			{
-				title: "Squoosh",
-				url: "https://squoosh.app",
-				desc: "Google 出品的图片压缩与格式转换",
+				title: "audiostrip",
+				url: "https://audiostrip.co.uk/",
+				desc: "架子鼓分轨",
 				weight: 9,
 			},
 			{
-				title: "Carbon",
-				url: "https://carbon.now.sh",
-				desc: "把代码片段生成漂亮的图片",
-				weight: 8,
+				title: "songsterr",
+				url: "https://www.songsterr.com/",
+				desc: "乐谱下载",
+				weight: 9,
 			},
+			{
+				title: "汪叔聊编曲",
+				url: "https://wangshubianqu.com/",
+				desc: "编曲学习",
+				weight: 8,
+			}，
+			{
+				title: "歌曲宝",
+				url: "https://www.gequbao.com/?from=www.xiaozhongjishu.com",
+				desc: "下载喜欢的歌曲",
+				weight: 7,
+			}
 		],
 	},
 	{
@@ -143,14 +161,26 @@ export const booknavConfig: BooknavGroup[] = [
 				url: "https://docs-firefly.cuteleaf.cn",
 				desc: "Firefly 主题模板文档",
 				icon: "https://docs-firefly.cuteleaf.cn/logo.png",
-				weight: 10,
+				weight: 6,
 			},
 			{
 				title: "夏夜流萤",
 				url: "https://blog.cuteleaf.cn",
 				desc: "飞萤之火自无梦的长夜亮起",
-				weight: 9,
+				weight: 6,
 			},
+			{
+				title: "咸鱼单机发布页",
+				url: "https://sway.cloud.microsoft/ZDgvMFBQkLababQW",
+				desc: "单机游戏下载",
+				weight: 7,
+			},
+			{
+				title: "做饭指南",
+				url: "https://howtocook.aiursoft.com/Dashboard",
+				desc: "精准好用的做饭指南",
+				weight: 9,
+			}
 		],
 	},
 ];
