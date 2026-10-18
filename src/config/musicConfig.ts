@@ -55,9 +55,9 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				lrc: "",
 			},
 			{
-				name:"all i need"
-				url"/assets/music/Bad Boy - 张惠妹"
-			}
+				name:"all i need",
+				url"/assets/music/Bad Boy - 张惠妹",
+			},
 		],
 	},
 };
