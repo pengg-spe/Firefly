@@ -56,8 +56,8 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			},
 			{
 				name:"all i need",
-				url"/assets/music/Bad Boy - 张惠妹",
-			},
+				url:"/assets/music/Bad Boy - 张惠妹",
+			}
 		],
 	},
 };
