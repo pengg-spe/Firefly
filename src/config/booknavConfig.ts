@@ -152,7 +152,7 @@ export const booknavConfig: BooknavGroup[] = [
 				url: "https://www.xmwsyy.com/",
 				desc: "无损音乐和MP3格式都能下载",
 				weight: 8,
-			}，
+			},
 			{
 				title: "咕咕音乐",
 				url: "https://www.gggmusic.com/",
