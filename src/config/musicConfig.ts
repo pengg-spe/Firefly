@@ -48,6 +48,13 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
+				name: "奇遇记",
+				artist: "生鱼片",
+				url: "/assets/music/奇遇记.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "",
+			},
+			{
 				name: "At Least I Had Fun",
 				artist: "Martin Jensen / RANI",
 				url: "/assets/music/At-Least-I-Had-Fun.mp3",
@@ -163,6 +170,13 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				name: "正月里",
 				artist: "九万",
 				url: "/assets/music/正月里.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "",
+			},
+			{
+				name: "爱的故事上集",
+				artist: "孙耀威",
+				url: "/assets/music/爱的故事上集.mp3",
 				cover: "/assets/music/cover/109951169585655912.webp",
 				lrc: "",
 			},
