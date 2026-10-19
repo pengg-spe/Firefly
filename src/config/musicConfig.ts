@@ -167,13 +167,6 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				lrc: "",
 			},
 			{
-				name: "爱的故事上集",
-				artist: "孙耀威",
-				url: "/assets/music/爱的故事上集.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
 				name: "能不能回到小时候",
 				artist: "庄东茹",
 				url: "/assets/music/能不能回到小时候.mp3",
