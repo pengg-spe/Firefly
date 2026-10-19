@@ -146,6 +146,12 @@ export const booknavConfig: BooknavGroup[] = [
 				url: "https://www.gequbao.com/?from=www.xiaozhongjishu.com",
 				desc: "下载喜欢的歌曲",
 				weight: 7,
+			},
+			{
+				title: "熊猫无损音乐",
+				url: "https://www.xmwsyy.com/",
+				desc: "无损音乐和MP3格式都能下载",
+				weight: 8,
 			}
 		],
 	},
