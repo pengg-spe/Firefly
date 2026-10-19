@@ -6,13 +6,13 @@ export const profileConfig: ProfileConfig = {
 	// 1. public 目录（以 "/" 开头，不优化）："/assets/images/avatar.webp"
 	// 2. src 目录（不以 "/" 开头，自动优化但会增加构建时间，推荐）："assets/images/avatar.webp"
 	// 3. 远程 URL："https://example.com/avatar.jpg"
-	avatar: "assets/images/cyber_punk_avatar.png",
+	avatar: " ",
 
 	// 名字
-	name: "XiaoP",
+	name: "",
 
 	// 个人签名
-	bio: "天行健，君子以自强不息；地势坤，君子以厚德载物",
+	bio: "万物静观皆自得 腹有诗书气自华",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -20,8 +20,8 @@ export const profileConfig: ProfileConfig = {
 	// 如果想使用尚未包含相应的图标集，则需要安装它
 	// `pnpm add @iconify-json/<icon-set-name>`
 	// showName: true 时显示图标和名称，false 时只显示图标
-	/* links: [
-		{
+	links: [
+/* 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
 			url: "https://github.com/pengg-spe",
@@ -44,6 +44,6 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa7-solid:atom",
 			url: "/atom/",
 			showName: false,
-		},
-	], */
+		}, */
+	],
 };
