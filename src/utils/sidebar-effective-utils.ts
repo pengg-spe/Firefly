@@ -4,9 +4,13 @@ import {
 	getResponsiveSidebarConfig,
 	gridColumnVarsToStyle,
 } from "@/utils/responsive-utils";
+import { getPageTypeFromPath, type PageType } from "@/utils/page-type-utils";
 
 export interface EffectiveSidebarContext {
+	/** 当前是否为文章详情页（含 /posts/、/post/） */
 	isPostPage: boolean;
+	/** 当前页面类型，用于按类型控制整体侧栏可见性 */
+	pageType: PageType;
 }
 
 export interface EffectiveSidebarState {
@@ -21,24 +25,46 @@ export interface EffectiveSidebarState {
 }
 
 /**
+ * 判断侧栏整体是否应显示（不含组件级 showOnPostPage/hideOnNonPostPage 逻辑）。
+ * - 若配置了 showSidebarOnPageTypes（白名单），则只在白名单页面类型显示；
+ * - 否则按传统 hideSidebarOnPostPage 逻辑。
+ */
+function isSidebarGloballyVisible(pageType: PageType): boolean {
+	const whiteList = sidebarLayoutConfig.showSidebarOnPageTypes;
+	if (whiteList != null) {
+		return whiteList.includes(pageType);
+	}
+	// 兜底：配置未定义时默认全部显示（除非 hideSidebarOnPostPage=true）
+	return !sidebarLayoutConfig.hideSidebarOnPostPage;
+}
+
+/**
  * 组装侧栏渲染所需的派生状态与网格几何（SSR，纯配置读）。
  * hasLeft/RightComponents 只依据 enable + position，不含页面类型判定 —— 静态容器只 SSR 一次。
+ * 整体侧栏是否可见，由 computeGridColumns 的 `enabled` 参数和 gridDataAttrs 中的
+ * hideSidebarOnPostPage 共同控制，客户端 swup 切页时会重新读取这两个字段重算。
  */
 export function getEffectiveSidebarState(
 	ctx: EffectiveSidebarContext,
 ): EffectiveSidebarState {
-	const { isPostPage } = ctx;
+	const { isPostPage, pageType } = ctx;
 
 	const sidebarConfig = getResponsiveSidebarConfig();
 
-	const hideSidebarOnPostPage =
-		sidebarLayoutConfig.hideSidebarOnPostPage === true;
+	// 是否应整体隐藏侧栏（用于 SSR 和客户端 updateMainGridCols）
+	const sidebarGloballyHidden = !isSidebarGloballyVisible(pageType);
+
+	// 旧的 hideSidebarOnPostPage 语义现在表达「整体侧栏是否隐藏」，
+	// 客户端 grid-layout-utils.ts 读取 data-grid-hide-sidebar-on-post 控制列数。
+	// 当 showSidebarOnPageTypes 有值时，等价于「当前页是否在白名单中」。
+	const hideSidebarOnPostPage = sidebarGloballyHidden;
 
 	const gridColumnVars = computeGridColumns({
-		enabled: sidebarLayoutConfig.enable,
+		// 当整体侧栏应隐藏时传 false，列数计算会自动只输出内容列（1fr）
+		enabled: !sidebarGloballyHidden && sidebarLayoutConfig.enable,
 		position: sidebarLayoutConfig.position,
 		tabletSidebar: sidebarConfig.tabletSidebar,
-		hideSidebarOnPostPage,
+		hideSidebarOnPostPage: false, // 已在 enabled 里控制，这里传 false 避免二次隐藏
 		isPostPage,
 		hasLeftWidgets: isPostPage
 			? sidebarConfig.hasLeftWidgetsOnPost
@@ -60,7 +86,9 @@ export function getEffectiveSidebarState(
 		staticBarClass: "min-w-0 overflow-x-clip overflow-y-visible",
 		gridColumnStyle: gridColumnVarsToStyle(gridColumnVars),
 		gridDataAttrs: {
-			"data-sidebar-enable": sidebarLayoutConfig.enable ? "true" : "false",
+			"data-sidebar-enable": (!sidebarGloballyHidden && sidebarLayoutConfig.enable)
+				? "true"
+				: "false",
 			"data-grid-hide-sidebar-on-post": hideSidebarOnPostPage
 				? "true"
 				: "false",

@@ -2,11 +2,20 @@
  * 主网格列布局与侧边栏可见性 / 吸顶间距管理（从 Layout.astro 迁出）。
  */
 
+import { sidebarLayoutConfig } from "@/config";
 import {
 	computeGridColumns,
 	gridColumnVarsToStyle,
 } from "@/utils/responsive-utils";
 import { isArticleDetailPage } from "@/utils/url-utils";
+import {
+	getPageTypeFromPath,
+	type PageType,
+} from "@/utils/page-type-utils";
+
+// 页面类型 → 是否在侧栏白名单中（SSR 时由 sidebarConfig.showSidebarOnPageTypes 决定）
+// 客户端通过读取 #main-grid 的 data-sidebar-page-type 获知当前页型
+const PAGE_TYPE_SIDEBAR_WHITELIST: PageType[] = ["home", "post"];
 
 const sidebarStickyState: Record<
 	"left" | "right",
@@ -23,6 +32,11 @@ const isCurrentPagePost = (): boolean =>
 // 上一次写入 #main-grid 的几何，用于 page:view 重复调用时短路
 let lastAppliedGeometry = "";
 
+// 判断当前页型是否在侧栏白名单中（showSidebarOnPageTypes）
+function isSidebarVisibleForPageType(pageType: PageType): boolean {
+	return PAGE_TYPE_SIDEBAR_WHITELIST.includes(pageType);
+}
+
 // 更新主网格的列几何。
 // SSR 写的是同一组自定义属性（见 MainGridLayout 的 style），这里在每次 swup page:view 时
 // 按当前页面类型重算，保证软导航后与 SSR 一致；两者共用 computeGridColumns 这一真源。
@@ -33,7 +47,11 @@ export function updateMainGridCols(): void {
 	const varHost = document.getElementById("content-panel-inner");
 	if (!mainGrid || !varHost) return;
 
+	const pathname = window.location.pathname;
+	const pageType = getPageTypeFromPath(pathname);
+	const isSidebarGloballyVisible = isSidebarVisibleForPageType(pageType);
 	const isPostPage = isCurrentPagePost();
+
 	// 缺省视为 true（fail-open）：属性缺失时不要误把整列折叠掉
 	const flag = (name: string): boolean =>
 		mainGrid.getAttribute(name) !== "false";
@@ -43,7 +61,11 @@ export function updateMainGridCols(): void {
 	const capNum = capRaw ? Number(capRaw) : Number.NaN;
 
 	const vars = computeGridColumns({
-		enabled: flag("data-sidebar-enable"),
+		// 整体侧栏由页面类型白名单控制：不在白名单中则关闭列布局
+		enabled:
+			isSidebarGloballyVisible &&
+			flag("data-sidebar-enable") &&
+			sidebarLayoutConfig.enable,
 		position:
 			positionAttr === "right" || positionAttr === "both"
 				? positionAttr
@@ -74,7 +96,37 @@ export function updateMainGridCols(): void {
 
 // 更新侧边栏组件的可见性
 export function updateSidebarComponentsVisibility(): void {
+	const pathname = window.location.pathname;
+	const pageType = getPageTypeFromPath(pathname);
+	const isSidebarGloballyVisible = isSidebarVisibleForPageType(pageType);
 	const isPostPage = isCurrentPagePost();
+
+	// 整体侧栏隐藏时，把侧栏列从网格轨道中彻底移除（而非 display:none，
+	// 后者不会收缩 grid 轨道，内容列仍可能被挤占）。
+	const mainGrid = document.getElementById("main-grid");
+	const mobileBottom = document.getElementById("mobile-bottom-sidebar");
+
+	document
+		.querySelectorAll<HTMLElement>("#main-grid > [id$='-sidebar-column']")
+		.forEach((col) => {
+			if (!isSidebarGloballyVisible) {
+				// 从网格轨道中移除列（inline style 优先级高于 grid-template-columns）
+				col.style.setProperty("grid-column", "none", "important");
+				// 再隐藏内容，防止侧栏组件闪现
+				col.style.setProperty("display", "none", "important");
+			} else {
+				col.style.removeProperty("grid-column");
+				col.style.removeProperty("display");
+			}
+		});
+
+	if (mobileBottom) {
+		if (!isSidebarGloballyVisible) {
+			mobileBottom.style.setProperty("display", "none", "important");
+		} else {
+			mobileBottom.style.removeProperty("display");
+		}
+	}
 
 	// 处理侧边栏级别的 hideSidebarOnPostPage 配置
 	document

@@ -24,6 +24,13 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 	// 本页没有侧栏列时，内容栏占「侧栏 + 内容栏」总宽的比例（0–1），不设置或 ≥1 则铺满
 	noSidebarContentWidth: 0.9,
 
+	// 只在哪些页面类型显示侧边栏（白名单）。
+	// 当前：主页和文章详情页，其他页（分类/系列/书签/动态/项目/相册/归档/about 等）一律隐藏、内容区铺开。
+	// 可选值（详见 src/utils/page-type-utils.ts）：
+	//   home | post | category | tag | series | archive | booknav | dynamic |
+	//   projects | gallery | friends | about | search | guestbook | sponsor | other
+	showSidebarOnPageTypes: ["home", "post"],
+
 	// 左侧边栏组件配置列表
 	// 组件的渲染顺序完全取决于它们在配置数组中出现的顺序，但top的组件会优先于sticky位置的组件渲染
 	// type 组件类型

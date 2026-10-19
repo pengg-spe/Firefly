@@ -1,3 +1,5 @@
+import type { PageType } from "@/utils/page-type-utils";
+
 // 组件配置类型定义
 export type WidgetComponentType =
 	| "profile"
@@ -81,6 +83,23 @@ export type SidebarLayoutConfig = {
 	tabletSidebar?: "left" | "right"; // 平板端(769-1279px)显示哪侧侧边栏，仅position为both时生效，默认left
 	hideSidebarOnPostPage?: boolean; // 文章详情页隐藏侧边栏，设为 true 则只在首页等非文章页显示，默认 false
 	noSidebarContentWidth?: number; // 本页没有侧栏列时内容栏占包裹层总宽的比例（0–1），不设置则铺满
+
+	/**
+	 * 指定在哪些页面类型上显示侧边栏（白名单）。
+	 *
+	 * - undefined（默认）：保持传统行为——所有页都显示侧边栏，除非同时 hideSidebarOnPostPage=true
+	 * - 设为具体数组：仅在数组中的页面类型显示侧边栏，其他页面隐藏（内容区会铺开）
+	 * - 设为空数组 []：所有页面都隐藏侧边栏
+	 *
+	 * 支持的页面类型（详见 src/utils/page-type-utils.ts）：
+	 *   home | post | category | tag | series | archive | booknav | dynamic |
+	 *   projects | gallery | friends | about | search | guestbook | sponsor | other
+	 *
+	 * 优先级：此选项一旦设置，将覆盖 hideSidebarOnPostPage 的行为。
+	 * 同时也控制移动端底部侧栏的显示。
+	 */
+	showSidebarOnPageTypes?: PageType[];
+
 	leftComponents: WidgetComponentConfig[]; // 左侧边栏组件配置列表
 	rightComponents: WidgetComponentConfig[]; // 右侧边栏组件配置列表
 	mobileBottomComponents: MobileBottomComponentConfig[]; // 移动端底部组件配置列表（<768px显示）

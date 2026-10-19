@@ -4,6 +4,7 @@ import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
 import { getCategoryList } from "@/utils/content-utils";
+import "@/styles/pages/card-grid.css";
 
 const categories = await getCategoryList();
 const totalPosts = categories.reduce((sum, cat) => sum + cat.count, 0);
@@ -21,7 +22,8 @@ const totalPosts = categories.reduce((sum, cat) => sum + cat.count, 0);
     </div>
 
     <!-- 分类卡片列表 -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+    <!-- auto-fit minmax：侧栏隐藏（分类/归档/动态等页）时，内容区铺开，列数随视口宽度自动增加 -->
+    <div class="card-grid mb-4" style="--card-grid-min-width: 260px">
         {
             categories.map((category, index) => (
                 <a
