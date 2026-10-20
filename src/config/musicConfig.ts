@@ -218,7 +218,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			{
 				name: "八千里路明月照",
 				artist: "泽国同学",
-				url: "/assets/music/八千里路明月照.mp3",
+				url: "/assets/music/八千里路明月照-泽国同学.mp3",
 				cover: "/assets/music/cover/109951169585655912.webp",
 				lrc: "",
 			},
