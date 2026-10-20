@@ -48,173 +48,13 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
-				name: "奇遇记",
-				artist: "生鱼片",
-				url: "/assets/music/奇遇记.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "At Least I Had Fun",
-				artist: "Martin Jensen / RANI",
-				url: "/assets/music/At-Least-I-Had-Fun.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "Eenie Meenie",
-				artist: "Justin Bieber / Sean Kingston",
-				url: "/assets/music/Eenie-Meenie.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "Fences",
-				artist: "Vicetone / Matt Wertz",
-				url: "/assets/music/Fences.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "Hello Summer",
-				artist: "Rameez",
-				url: "/assets/music/Hello-Summer.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "Love To Lose",
-				artist: "Sandro Cavazza / Georgia Ku",
-				url: "/assets/music/Love-To-Lose.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "No Rest",
-				artist: "Vicetone",
-				url: "/assets/music/No-Rest.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "One Time",
-				artist: "Justin Bieber",
-				url: "/assets/music/One-Time.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "Something Strange",
-				artist: "Vicetone",
-				url: "/assets/music/Something-Strange.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "Take A Bow",
-				artist: "Rihanna",
-				url: "/assets/music/Take-A-Bow.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "The Cure",
-				artist: "Lady Gaga",
-				url: "/assets/music/The-Cure.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "U Make Me Wanna",
-				artist: "Blue",
-				url: "/assets/music/U-Make-Me-Wanna.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "Wish You Were Here",
-				artist: "Vicetone",
-				url: "/assets/music/Wish-You-Were-Here.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "啷个哩个啷",
-				artist: "鹏泊",
-				url: "/assets/music/啷个哩个啷.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "如果当时",
-				artist: "许嵩",
-				url: "/assets/music/如果当时.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "我们 (feat. 李杰明)",
-				artist: "陈忻玥 / 王艳薇 / Sophie Chen / 李杰明",
-				url: "/assets/music/我们-(feat.-李杰明).mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
 				name: "我本将心向明月",
 				artist: "王朝1982 / 朱旭BooBoo",
 				url: "/assets/music/我本将心向明月.mp3",
 				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
+				lrc: "/assets/music/lrc/我本将心向明月.lrc",
 			},
-			{
-				name: "正月里",
-				artist: "九万",
-				url: "/assets/music/正月里.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "爱的故事上集",
-				artist: "孙耀威",
-				url: "/assets/music/爱的故事上集.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "能不能回到小时候",
-				artist: "庄东茹",
-				url: "/assets/music/能不能回到小时候.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "香草把噗",
-				artist: "南拳妈妈",
-				url: "/assets/music/香草把噗.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "죽을 만큼 아파서 (死一样的痛苦)",
-				artist: "MC梦",
-				url: "/assets/music/죽을-만큼-아파서-(死一样的痛苦).mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "下山",
-				artist: "要不要买菜",
-				url: "/assets/music/下山.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
-			{
-				name: "一事无成",
-				artist: "郑融 / 周柏豪",
-				url: "/assets/music/一事无成.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
-				lrc: "",
-			},
+
 			{
 				name: "八千里路明月照",
 				artist: "泽国同学",
@@ -222,6 +62,190 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				cover: "/assets/music/cover/109951169585655912.webp",
 				lrc: "/assets/music/lrc/八千里路明月照.lrc",
 			},
+
+			{
+				name: "Take A Bow",
+				artist: "Rihanna",
+				url: "/assets/music/Take-A-Bow.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/Take-A-Bow.lrc",
+			},
+
+			{
+				name: "Something Strange",
+				artist: "Vicetone",
+				url: "/assets/music/Something-Strange.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/Something-Strange.lrc",
+			},
+
+			{
+				name: "Love To Lose",
+				artist: "Sandro Cavazza / Georgia Ku",
+				url: "/assets/music/Love-To-Lose.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/Love-To-Lose.lrc",
+			},
+
+			{
+				name: "The Cure",
+				artist: "Lady Gaga",
+				url: "/assets/music/The-Cure.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/The-Cure.lrc",
+			},
+
+			{
+				name: "如果当时",
+				artist: "许嵩",
+				url: "/assets/music/如果当时.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/如果当时.lrc",
+			},
+
+			{
+				name: "U Make Me Wanna",
+				artist: "Blue",
+				url: "/assets/music/U-Make-Me-Wanna.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/U-Make-Me-Wanna.lrc",
+			},
+
+			{
+				name: "爱的故事上集",
+				artist: "孙耀威",
+				url: "/assets/music/爱的故事上集.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/爱的故事上集.lrc",
+			},
+
+			{
+				name: "Wish You Were Here",
+				artist: "Vicetone",
+				url: "/assets/music/Wish-You-Were-Here.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/Wish-You-Were-Here.lrc",
+			},
+
+			{
+				name: "香草把噗",
+				artist: "南拳妈妈",
+				url: "/assets/music/香草把噗.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/香草把噗.lrc",
+			},
+
+			{
+				name: "Eenie Meenie",
+				artist: "Justin Bieber / Sean Kingston",
+				url: "/assets/music/Eenie-Meenie.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/Eenie-Meenie.lrc",
+			},
+
+			{
+				name: "Fences",
+				artist: "Vicetone / Matt Wertz",
+				url: "/assets/music/Fences.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/Fences.lrc",
+			},
+
+			{
+				name: "我们 (feat. 李杰明)",
+				artist: "陈忻玥 / 王艳薇 / Sophie Chen / 李杰明",
+				url: "/assets/music/我们-(feat.-李杰明).mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/我们-(feat.-李杰明).lrc",
+			},
+
+			{
+				name: "One Time",
+				artist: "Justin Bieber",
+				url: "/assets/music/One-Time.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/One-Time.lrc",
+			},
+
+			{
+				name: "正月里",
+				artist: "九万",
+				url: "/assets/music/正月里.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/正月里.lrc",
+			},
+
+			{
+				name: "No Rest",
+				artist: "Vicetone",
+				url: "/assets/music/No-Rest.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/No-Rest.lrc",
+			},
+
+			{
+				name: "能不能回到小时候",
+				artist: "庄东茹",
+				url: "/assets/music/能不能回到小时候.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/能不能回到小时候.lrc",
+			},
+
+			{
+				name: "啷个哩个啷",
+				artist: "鹏泊",
+				url: "/assets/music/啷个哩个啷.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/啷个哩个啷.lrc",
+			},
+
+			{
+				name: "死一样的痛过",
+				artist: "MC梦",
+				url: "/assets/music/死一样的痛过.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/死一样的痛过.lrc",
+			},
+
+			{
+				name: "奇遇记",
+				artist: "生鱼片",
+				url: "/assets/music/奇遇记.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/奇遇记.lrc",
+			},
+
+			{
+				name: "Hello Summer",
+				artist: "Rameez",
+				url: "/assets/music/Hello-Summer.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/Hello-Summer.lrc",
+			},
+
+			{
+				name: "下山",
+				artist: "要不要买菜",
+				url: "/assets/music/下山.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/下山.lrc",
+			},
+
+			{
+				name: "At Least I Had Fun",
+				artist: "Martin Jensen / RANI",
+				url: "/assets/music/At-Least-I-Had-Fun.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/At-Least-I-Had-Fun.lrc",
+			},
+
+			{
+				name: "一事无成",
+				artist: "郑融 / 周柏豪",
+				url: "/assets/music/一事无成.mp3",
+				cover: "/assets/music/cover/109951169585655912.webp",
+				lrc: "/assets/music/lrc/一事无成.lrc",
+			}
 		],
 	},
 };
