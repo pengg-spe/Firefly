@@ -45,7 +45,7 @@ export const siteConfig: SiteConfig = {
 	title: "PunkP Blog",
 
 	// 站点副标题
-	subtitle: "Demo site",
+	subtitle: "",
 
 	// 站点 URL
 	site_url: "https://firefly-blog-c91.pages.dev/",

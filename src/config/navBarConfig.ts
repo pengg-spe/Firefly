@@ -21,6 +21,8 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	links.push(LinkPresets.Series);
 	
 	links.push(LinkPresets.Booknav);
+	
+	links.push(LinkPresets.Dynamic),
 
 	// 文章及其子菜单
 	/* links.push({
@@ -62,8 +64,6 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		url: "#",
 		icon: "material-symbols:person",
 		children: [
-			// 动态
-			LinkPresets.Dynamic,
 
 			// 项目
 			LinkPresets.Projects,
@@ -71,7 +71,6 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			// 相册
 			LinkPresets.Gallery,
 
-			// 书签导航
 			LinkPresets.Archive,
 
 			// 哔哩哔哩追番
@@ -189,7 +188,7 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		pageKey: "guestbook",
 	},
 	Dynamic: {
-		name: "动态",
+		name: "灵感动态",
 		url: "/dynamic/",
 		icon: "material-symbols:forum-rounded",
 		pageKey: "dynamic",
