@@ -73,16 +73,22 @@ export const booknavConfig: BooknavGroup[] = [
 		weight: 90,
 		items: [
 			{
+				title: "Makeworld",
+				url: "https://makerworld.com.cn",
+				desc: "免费下载3D模型",
+				weight: 6,
+			},
+			{
 				title: "Iconify",
 				url: "https://icon-sets.iconify.design",
 				desc: "海量开源图标集合搜索",
-				weight: 6,
+				weight: 5,
 			},
 			{
 				title: "iconfont",
 				url: "https://www.iconfont.cn",
 				desc: "阿里巴巴矢量图标库",
-				weight: 6,
+				weight: 5,
 			},
 			{
 				title: "Core77",
